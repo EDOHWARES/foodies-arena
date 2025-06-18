@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   MapPin,
   Phone,
@@ -21,13 +21,13 @@ import {
   Shield,
   ChefHat,
   Award,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function FoodiesArenaLanding() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -36,34 +36,58 @@ export default function FoodiesArenaLanding() {
     { name: "Facilities", href: "#facilities" },
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
-  ]
+  ];
 
   const facilities = [
     {
       icon: Users,
       title: "Private Meeting Rooms",
-      description: "Professional spaces for business meetings and private dining with complete privacy and comfort.",
-      features: ["Air Conditioning", "WiFi", "Projector Available", "Catering Service"],
+      description:
+        "Professional spaces for business meetings and private dining with complete privacy and comfort.",
+      features: [
+        "Air Conditioning",
+        "WiFi",
+        "Projector Available",
+        "Catering Service",
+      ],
     },
     {
       icon: Baby,
       title: "Children's Playground",
-      description: "Safe and fun playground area where kids can enjoy while parents dine in peace.",
-      features: ["Safe Equipment", "Supervised Area", "Age-Appropriate Toys", "Clean Environment"],
+      description:
+        "Safe and fun playground area where kids can enjoy while parents dine in peace.",
+      features: [
+        "Safe Equipment",
+        "Supervised Area",
+        "Age-Appropriate Toys",
+        "Clean Environment",
+      ],
     },
     {
       icon: Crown,
       title: "VIP Lounge",
-      description: "Exclusive premium dining experience with personalized service and luxury ambiance.",
-      features: ["Premium Seating", "Dedicated Service", "Exclusive Menu", "Private Entrance"],
+      description:
+        "Exclusive premium dining experience with personalized service and luxury ambiance.",
+      features: [
+        "Premium Seating",
+        "Dedicated Service",
+        "Exclusive Menu",
+        "Private Entrance",
+      ],
     },
     {
       icon: Utensils,
       title: "Main Dining Area",
-      description: "Spacious and comfortable dining area serving both local Nigerian and international cuisine.",
-      features: ["200+ Capacity", "Climate Controlled", "Live Music", "Family Friendly"],
+      description:
+        "Spacious and comfortable dining area serving both local Nigerian and international cuisine.",
+      features: [
+        "200+ Capacity",
+        "Climate Controlled",
+        "Live Music",
+        "Family Friendly",
+      ],
     },
-  ]
+  ];
 
   const menuCategories = [
     {
@@ -79,9 +103,10 @@ export default function FoodiesArenaLanding() {
         },
         {
           name: "Pepper Soup Deluxe",
-          description: "Spicy traditional pepper soup with assorted meat and fish",
+          description:
+            "Spicy traditional pepper soup with assorted meat and fish",
           price: "₦3,000",
-          image: "/placeholder.svg?height=200&width=300",
+          image: "/images/meals/peper deluxe.webp?height=200&width=300",
         },
       ],
     },
@@ -91,20 +116,21 @@ export default function FoodiesArenaLanding() {
       dishes: [
         {
           name: "Grilled Salmon",
-          description: "Fresh Atlantic salmon with herbs and seasonal vegetables",
+          description:
+            "Fresh Atlantic salmon with herbs and seasonal vegetables",
           price: "₦4,500",
-          image: "/placeholder.svg?height=200&width=300",
+          image: "/images/meals/grilled salmon.webp?height=200&width=300",
         },
         {
           name: "Beef Steak",
           description: "Tender beef steak with mashed potatoes and gravy",
           price: "₦5,000",
-          image: "/placeholder.svg?height=200&width=300",
+          image: "/images/meals/beef steak.webp?height=200&width=300",
           popular: true,
         },
       ],
     },
-  ]
+  ];
 
   const testimonials = [
     {
@@ -128,14 +154,25 @@ export default function FoodiesArenaLanding() {
       avatar: "/images/potrait.webp?height=60&width=60",
       rating: 5,
     },
-  ]
+  ];
 
   const stats = [
     { number: "500+", label: "Happy Customers Daily" },
     { number: "50+", label: "Menu Items" },
     { number: "7", label: "Years of Excellence" },
     { number: "24/7", label: "Customer Support" },
-  ]
+  ];
+
+  const galleryImages = [
+    "/images/inview1.jpg?height=300&width=300",
+    "/images/inview2.jpg?height=300&width=300",
+    "/images/inview3.jpg?height=300&width=300",
+    "/images/inview4.jpg?height=300&width=300",
+    "/images/inview5.jpg?height=300&width=300",
+    "/images/inview1.jpg?height=300&width=300",
+    "/images/inview2.jpg?height=300&width=300",
+    "/images/inview3.jpg?height=300&width=300",
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -173,8 +210,17 @@ export default function FoodiesArenaLanding() {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-700">
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-700"
+              >
+                {isMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </Button>
             </div>
           </div>
@@ -206,13 +252,16 @@ export default function FoodiesArenaLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/outsideview.jpg?height=1080&width=1920"
             alt="Delicious Nigerian food spread"
             fill
-            className="object-cover"
+            className="object-cover object-left"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
@@ -232,8 +281,9 @@ export default function FoodiesArenaLanding() {
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Experience authentic Nigerian cuisine and international dishes in our premium facilities - from family
-            dining to VIP lounges, meeting rooms to children's playground.
+            Experience authentic Nigerian cuisine and international dishes in
+            our premium facilities - from family dining to VIP lounges, meeting
+            rooms to children's playground.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -247,7 +297,7 @@ export default function FoodiesArenaLanding() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-yellow-400 bg-yellow-400 text-black px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               Order on WhatsApp
@@ -258,8 +308,12 @@ export default function FoodiesArenaLanding() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">{stat.number}</div>
-                <div className="text-sm md:text-base text-gray-300">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm md:text-base text-gray-300">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -267,7 +321,10 @@ export default function FoodiesArenaLanding() {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="py-20 px-4 bg-gradient-to-br from-green-50 to-yellow-50">
+      <section
+        id="about"
+        className="py-20 px-4 bg-gradient-to-br from-green-50 to-yellow-50"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -280,13 +337,16 @@ export default function FoodiesArenaLanding() {
                 <span className="text-yellow-600">Innovation</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Located in the vibrant heart of Gonin Gora, Kaduna, Foodies Arena stands as the premier dining
-                destination that brings together authentic Nigerian flavors and international cuisine under one roof.
+                Located in the vibrant heart of Gonin Gora, Kaduna, Foodies
+                Arena stands as the premier dining destination that brings
+                together authentic Nigerian flavors and international cuisine
+                under one roof.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our state-of-the-art facility features private meeting rooms for business gatherings, a safe children's
-                playground for family dining, an exclusive VIP lounge for special occasions, and a spacious main dining
-                area that accommodates over 200 guests.
+                Our state-of-the-art facility features private meeting rooms for
+                business gatherings, a safe children's playground for family
+                dining, an exclusive VIP lounge for special occasions, and a
+                spacious main dining area that accommodates over 200 guests.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
@@ -295,8 +355,12 @@ export default function FoodiesArenaLanding() {
                     <ChefHat className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-800">Expert Chefs</div>
-                    <div className="text-sm text-gray-600">Professional culinary team</div>
+                    <div className="font-semibold text-gray-800">
+                      Expert Chefs
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Professional culinary team
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -304,8 +368,12 @@ export default function FoodiesArenaLanding() {
                     <Shield className="h-6 w-6 text-yellow-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-800">Quality Assured</div>
-                    <div className="text-sm text-gray-600">Fresh ingredients daily</div>
+                    <div className="font-semibold text-gray-800">
+                      Quality Assured
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Fresh ingredients daily
+                    </div>
                   </div>
                 </div>
               </div>
@@ -314,7 +382,9 @@ export default function FoodiesArenaLanding() {
                 <MapPin className="mr-3 h-6 w-6" />
                 <div>
                   <div className="font-semibold">Visit Us Today</div>
-                  <div className="text-sm">Gonin Gora, Kaduna State, Nigeria</div>
+                  <div className="text-sm">
+                    Gonin Gora, Kaduna State, Nigeria
+                  </div>
                 </div>
               </div>
             </div>
@@ -364,10 +434,12 @@ export default function FoodiesArenaLanding() {
               Premium Facilities
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              More Than Just a <span className="text-green-600">Restaurant</span>
+              More Than Just a{" "}
+              <span className="text-green-600">Restaurant</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our world-class facilities designed to cater to every occasion and need
+              Discover our world-class facilities designed to cater to every
+              occasion and need
             </p>
           </div>
 
@@ -383,14 +455,21 @@ export default function FoodiesArenaLanding() {
                       <facility.icon className="h-8 w-8 text-green-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-3">{facility.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{facility.description}</p>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                        {facility.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {facility.description}
+                      </p>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
                     {facility.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <div
+                        key={featureIndex}
+                        className="flex items-center text-sm text-gray-600"
+                      >
                         <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
                         {feature}
                       </div>
@@ -404,7 +483,10 @@ export default function FoodiesArenaLanding() {
       </section>
 
       {/* Menu Preview Section */}
-      <section id="menu" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-green-50">
+      <section
+        id="menu"
+        className="py-20 px-4 bg-gradient-to-br from-gray-50 to-green-50"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="bg-green-100 text-green-800 px-4 py-2 mb-6">
@@ -415,7 +497,8 @@ export default function FoodiesArenaLanding() {
               Culinary <span className="text-green-600">Excellence</span> Awaits
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From authentic Nigerian classics to international favorites, every dish is crafted with passion
+              From authentic Nigerian classics to international favorites, every
+              dish is crafted with passion
             </p>
           </div>
 
@@ -449,13 +532,19 @@ export default function FoodiesArenaLanding() {
                         </Badge>
                       )}
                       <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                        <span className="font-bold text-green-600">{dish.price}</span>
+                        <span className="font-bold text-green-600">
+                          {dish.price}
+                        </span>
                       </div>
                     </div>
                     <CardContent className="p-6">
-                      <h4 className="text-xl font-bold text-gray-800 mb-2">{dish.name}</h4>
+                      <h4 className="text-xl font-bold text-gray-800 mb-2">
+                        {dish.name}
+                      </h4>
                       <p className="text-gray-600 mb-4">{dish.description}</p>
-                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white">Add to Order</Button>
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                        Add to Order
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
@@ -486,7 +575,9 @@ export default function FoodiesArenaLanding() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               What Our <span className="text-green-600">Customers</span> Say
             </h2>
-            <p className="text-xl text-gray-600">Real experiences from our valued guests</p>
+            <p className="text-xl text-gray-600">
+              Real experiences from our valued guests
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -498,10 +589,15 @@ export default function FoodiesArenaLanding() {
                 <CardContent className="p-0">
                   <div className="flex items-center mb-6">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                      <Star
+                        key={i}
+                        className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                      />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-6 italic text-lg leading-relaxed">"{testimonial.text}"</p>
+                  <p className="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
                   <div className="flex items-center">
                     <Image
                       src={testimonial.avatar || "/placeholder.svg"}
@@ -511,8 +607,12 @@ export default function FoodiesArenaLanding() {
                       className="rounded-full mr-4 border-2 border-green-100"
                     />
                     <div>
-                      <p className="font-bold text-gray-800 text-lg">{testimonial.name}</p>
-                      <p className="text-sm text-green-600 font-medium">{testimonial.role}</p>
+                      <p className="font-bold text-gray-800 text-lg">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-green-600 font-medium">
+                        {testimonial.role}
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -523,21 +623,31 @@ export default function FoodiesArenaLanding() {
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-20 px-4 bg-gradient-to-br from-green-50 to-yellow-50">
+      <section
+        id="gallery"
+        className="py-20 px-4 bg-gradient-to-br from-green-50 to-yellow-50"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="bg-green-100 text-green-800 px-4 py-2 mb-6">📸 Gallery</Badge>
+            <Badge className="bg-green-100 text-green-800 px-4 py-2 mb-6">
+              📸 Gallery
+            </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               Visual <span className="text-green-600">Feast</span>
             </h2>
-            <p className="text-xl text-gray-600">Experience our ambiance and culinary artistry</p>
+            <p className="text-xl text-gray-600">
+              Experience our ambiance and culinary artistry
+            </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[...Array(8)].map((_, index) => (
-              <div key={index} className="relative overflow-hidden rounded-2xl group cursor-pointer aspect-square">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-2xl group cursor-pointer aspect-square"
+              >
                 <Image
-                  src={`/placeholder.svg?height=300&width=300&text=Gallery${index + 1}`}
+                  src={image}
                   alt={`Gallery image ${index + 1}`}
                   width={300}
                   height={300}
@@ -561,7 +671,9 @@ export default function FoodiesArenaLanding() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               Visit Us <span className="text-green-600">Today</span>
             </h2>
-            <p className="text-xl text-gray-600">We're here to serve you exceptional dining experiences</p>
+            <p className="text-xl text-gray-600">
+              We're here to serve you exceptional dining experiences
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
@@ -572,9 +684,15 @@ export default function FoodiesArenaLanding() {
                     <MapPin className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800 mb-2 text-lg">Address</h3>
-                    <p className="text-gray-600">Gonin Gora, Kaduna State, Nigeria</p>
-                    <p className="text-sm text-green-600 mt-1">Easy parking available</p>
+                    <h3 className="font-bold text-gray-800 mb-2 text-lg">
+                      Address
+                    </h3>
+                    <p className="text-gray-600">
+                      Gonin Gora, Kaduna State, Nigeria
+                    </p>
+                    <p className="text-sm text-green-600 mt-1">
+                      Easy parking available
+                    </p>
                   </div>
                 </div>
 
@@ -583,9 +701,13 @@ export default function FoodiesArenaLanding() {
                     <Phone className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800 mb-2 text-lg">Phone & WhatsApp</h3>
+                    <h3 className="font-bold text-gray-800 mb-2 text-lg">
+                      Phone & WhatsApp
+                    </h3>
                     <p className="text-gray-600">+234 803 123 4567</p>
-                    <p className="text-sm text-green-600 mt-1">Available 24/7 for orders</p>
+                    <p className="text-sm text-green-600 mt-1">
+                      Available 24/7 for orders
+                    </p>
                   </div>
                 </div>
 
@@ -594,22 +716,31 @@ export default function FoodiesArenaLanding() {
                     <Clock className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800 mb-2 text-lg">Opening Hours</h3>
-                    <p className="text-gray-600">Monday - Sunday: 8:00 AM - 11:00 PM</p>
-                    <p className="text-sm text-green-600 mt-1">Extended hours on weekends</p>
+                    <h3 className="font-bold text-gray-800 mb-2 text-lg">
+                      Opening Hours
+                    </h3>
+                    <p className="text-gray-600">
+                      Monday - Sunday: 8:00 AM - 11:00 PM
+                    </p>
+                    <p className="text-sm text-green-600 mt-1">
+                      Extended hours on weekends
+                    </p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white flex-1">
+                <Button
+                  size="lg"
+                  className="bg-green-600 hover:bg-green-700 text-white flex-1 py-3"
+                >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   WhatsApp Us
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white flex-1"
+                  className="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white flex-1 py-3"
                 >
                   <Calendar className="mr-2 h-5 w-5" />
                   Book Table
@@ -619,15 +750,15 @@ export default function FoodiesArenaLanding() {
 
             <div className="h-96 lg:h-full rounded-2xl overflow-hidden shadow-lg">
               <iframe
+                title="Google Map Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.9500440690267!2d7.39988931147876!3d10.425539065523122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d37c377043e29%3A0xc0ee3ed7d66f002f!2sFoodies%20Arena!5e0!3m2!1sen!2sng!4v1750185644716!5m2!1sen!2sng"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Foodies Arena Location"
-              />
+              ></iframe>
             </div>
           </div>
         </div>
@@ -649,17 +780,27 @@ export default function FoodiesArenaLanding() {
                 <h3 className="text-2xl font-bold">Foodies Arena</h3>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Kaduna's premier dining destination offering authentic Nigerian cuisine, international dishes, and
-                world-class facilities for every occasion.
+                Kaduna's premier dining destination offering authentic Nigerian
+                cuisine, international dishes, and world-class facilities for
+                every occasion.
               </p>
               <div className="flex space-x-4">
-                <Link href="#" className="bg-green-600 p-3 rounded-full hover:bg-green-700 transition-colors">
+                <Link
+                  href="#"
+                  className="bg-green-600 p-3 rounded-full hover:bg-green-700 transition-colors"
+                >
                   <Instagram className="h-5 w-5" />
                 </Link>
-                <Link href="https://web.facebook.com/foodiesarenang/?_rdc=1&_rdr" className="bg-green-600 p-3 rounded-full hover:bg-green-700 transition-colors">
+                <Link
+                  href="https://web.facebook.com/foodiesarenang/?_rdc=1&_rdr"
+                  className="bg-green-600 p-3 rounded-full hover:bg-green-700 transition-colors"
+                >
                   <Facebook className="h-5 w-5" />
                 </Link>
-                <Link href="#" className="bg-green-600 p-3 rounded-full hover:bg-green-700 transition-colors">
+                <Link
+                  href="#"
+                  className="bg-green-600 p-3 rounded-full hover:bg-green-700 transition-colors"
+                >
                   <MessageCircle className="h-5 w-5" />
                 </Link>
               </div>
@@ -670,7 +811,10 @@ export default function FoodiesArenaLanding() {
               <ul className="space-y-3 text-gray-300">
                 {navItems.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="hover:text-yellow-400 transition-colors">
+                    <Link
+                      href={item.href}
+                      className="hover:text-yellow-400 transition-colors"
+                    >
                       {item.name}
                     </Link>
                   </li>
@@ -710,10 +854,13 @@ export default function FoodiesArenaLanding() {
           </div>
 
           <div className="border-t border-gray-700 pt-8 text-center text-gray-300">
-            <p>&copy; {new Date().getFullYear()} Foodies Arena. All rights reserved. | Designed with ❤️ for Kaduna</p>
+            <p>
+              &copy; {new Date().getFullYear()} Foodies Arena. All rights
+              reserved. | Designed with ❤️ for Kaduna
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
