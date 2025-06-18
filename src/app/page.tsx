@@ -269,7 +269,7 @@ export default function FoodiesArenaLanding() {
 
         <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto pt-20">
           <div className="mb-8">
-            <Badge className="bg-yellow-500 text-black px-4 py-2 text-sm font-semibold mb-4">
+            <Badge className="bg-yellow-500 text-black px-4 py-2 text-sm font-semibold my-4 mt-10">
               ⭐ Kaduna's Premier Dining Destination
             </Badge>
           </div>
